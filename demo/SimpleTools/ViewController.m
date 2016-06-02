@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "objcipc.h"
+#import "Define.h"
 @interface ViewController ()
 
 @end
@@ -18,20 +19,35 @@
     [super viewDidLoad];
 }
 
+- (IBAction)firstAction:(id)sender {
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:FirstNofi dictionary:nil replyHandler:^(NSDictionary *response) {
+        NSLog(@"response:%@",response);
+    }];
+}
+- (IBAction)secondAction:(id)sender {
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:SecondNofi dictionary:nil replyHandler:^(NSDictionary *response) {
+        NSLog(@"response:%@",response);
+    }];
+}
+- (IBAction)thirdAction:(id)sender {
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:ThirdNofi dictionary:nil replyHandler:^(NSDictionary *response) {
+        NSLog(@"response:%@",response);
+    }];
+}
 
 - (IBAction)logOutAction:(id)sender {
-        [OBJCIPC sendMessageToSpringBoardWithMessageName:@"logout" dictionary:nil replyHandler:^(NSDictionary *response) {
+        [OBJCIPC sendMessageToSpringBoardWithMessageName:LogOut dictionary:nil replyHandler:^(NSDictionary *response) {
             NSLog(@"logOut");
         }];
 }
 
 - (IBAction)rebootAction:(id)sender {
-    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"reboot" dictionary:nil replyHandler:^(NSDictionary *response) {
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:Reboot dictionary:nil replyHandler:^(NSDictionary *response) {
         NSLog(@"reboot");
     }];
 }
 - (IBAction)powerDownAction:(id)sender {
-    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"powerDown" dictionary:nil replyHandler:^(NSDictionary *response) {
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:PowerDown dictionary:nil replyHandler:^(NSDictionary *response) {
         NSLog(@"powerDown");
     }];
 }

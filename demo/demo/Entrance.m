@@ -12,6 +12,15 @@
 #import "CustomWindow.h"
 #import "objcipc.h"
 #import <substrate.h>
+#import "Define.h"
+#import "ALApplicationList.h"
+#import "UIDevice2.h"
+@interface LSApplicationProxy
++(id)applicationProxyForIdentifier:(id)arg1;
+-(NSUUID*)deviceIdentifierForVendor;
+@end
+
+
 @implementation Entrance
 + (instancetype)sharedInstance {
     static id sharedInstance = nil;
@@ -46,7 +55,7 @@
         NSLog(@"add window");
         dispatch_async(dispatch_get_main_queue(), ^{
 //            CustomWindow *window =
-            [[CustomWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//            [[CustomWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //            [window setWindowLevel:1];
 //            [window setHidden:NO];
             self.loaded   = YES;
@@ -68,22 +77,50 @@
 //        id SpringBoard = [UIApplication sharedApplication];
 //        [SpringBoard powerDown];
     
-    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:@"logout" handler:^NSDictionary *(NSDictionary * message) {
+    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:LogOut handler:^NSDictionary *(NSDictionary * message) {
          system("killall -9 SpringBoard");
         return nil;
     }];
     
-    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:@"reboot" handler:^NSDictionary *(NSDictionary * message) {
+    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:Reboot handler:^NSDictionary *(NSDictionary * message) {
         system("reboot");
         return nil;
     }];
     
-    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:@"powerDown" handler:^NSDictionary *(NSDictionary * message) {
+    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:PowerDown handler:^NSDictionary *(NSDictionary * message) {
         id SpringBoard = [UIApplication sharedApplication];
         [SpringBoard powerDown];
         return nil;
     }];
 
+    
+    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:FirstNofi handler:^NSDictionary *(NSDictionary * message) {
+        NSArray *sortedDisplayIdentifiers;
+        NSDictionary *applications = [[ALApplicationList sharedApplicationList] applicationsFilteredUsingPredicate:[NSPredicate predicateWithFormat:@"isSystemApplication = TRUE"]
+                                                                                                  onlyVisible:YES titleSortedIdentifiers:&sortedDisplayIdentifiers];
+        enum {
+            ALApplicationIconSizeSmall = 29,
+            ALApplicationIconSizeLarge = 59
+        };
+//        NSString *displayIdentifier = [displayIdentifiers objectAtIndex:idx];
+//        UIImage *icon = [apps iconOfSize:ALApplicationIconSizeSmall forDisplayIdentifier:displayIdentifier];
+        NSDictionary *response = @{@"Identifiers":sortedDisplayIdentifiers,@"applications":applications};
+        return response;
+    }];
+    
+    
+    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:SecondNofi handler:^NSDictionary *(NSDictionary * message) {
+        NSString* realIdentifierForVendor =
+        [[NSClassFromString(@"LSApplicationProxy") applicationProxyForIdentifier:[NSBundle mainBundle].bundleIdentifier] deviceIdentifierForVendor].UUIDString;
+        return @{@"realIdentifierForVendor":realIdentifierForVendor};
+    }];
+    
+    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:ThirdNofi handler:^NSDictionary *(NSDictionary * message) {
+        [[UIDevice  currentDevice] _setBatteryLevel:0.3];
+        NSString *ver = [[UIDevice currentDevice] buildVersion];
+        [[UIDevice currentDevice ]playInputClick];
+        return @{@"key":ver};
+    }];
 }
 
 

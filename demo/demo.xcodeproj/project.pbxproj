@@ -33,7 +33,11 @@
 		A482AFF01D0047B6009ADCFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A482AFEE1D0047B6009ADCFC /* LaunchScreen.storyboard */; };
 		A482AFF61D004BBB009ADCFC /* libobjcipc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A482AFF51D004BBB009ADCFC /* libobjcipc.dylib */; };
 		A482B0131D004DA8009ADCFC /* libobjcipc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A482AFF51D004BBB009ADCFC /* libobjcipc.dylib */; };
-		A482B0151D005289009ADCFC /* libobjcipc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A482B0141D005289009ADCFC /* libobjcipc.dylib */; };
+		CC4BE23D1D00889100124B96 /* libapplist.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4BE23C1D00889100124B96 /* libapplist.dylib */; };
+		CC4BE23E1D0088F500124B96 /* libapplist.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4BE23C1D00889100124B96 /* libapplist.dylib */; };
+		CC4BE2411D00930E00124B96 /* ActionMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4BE23F1D00930E00124B96 /* ActionMenu.h */; };
+		CC4BE2451D00942000124B96 /* UIResponder+AMExample.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4BE2431D00942000124B96 /* UIResponder+AMExample.h */; };
+		CC4BE2461D00942000124B96 /* UIResponder+AMExample.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BE2441D00942000124B96 /* UIResponder+AMExample.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +77,12 @@
 		A482AFEF1D0047B6009ADCFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A482AFF11D0047B6009ADCFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A482AFF51D004BBB009ADCFC /* libobjcipc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjcipc.dylib; path = ../../../../../opt/theos/lib/libobjcipc.dylib; sourceTree = "<group>"; };
-		A482B0141D005289009ADCFC /* libobjcipc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libobjcipc.dylib; sourceTree = "<group>"; };
+		CC4BE2391D0086B200124B96 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Define.h; path = ../Define.h; sourceTree = "<group>"; };
+		CC4BE23C1D00889100124B96 /* libapplist.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libapplist.dylib; path = ../../../../opt/theos/lib/libapplist.dylib; sourceTree = "<group>"; };
+		CC4BE23F1D00930E00124B96 /* ActionMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionMenu.h; sourceTree = "<group>"; };
+		CC4BE2431D00942000124B96 /* UIResponder+AMExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+AMExample.h"; sourceTree = "<group>"; };
+		CC4BE2441D00942000124B96 /* UIResponder+AMExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+AMExample.m"; sourceTree = "<group>"; };
+		CC4BE2471D00989A00124B96 /* UIDevice2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDevice2.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4BE23D1D00889100124B96 /* libapplist.dylib in Frameworks */,
 				A482B0131D004DA8009ADCFC /* libobjcipc.dylib in Frameworks */,
 				A482AF9C1CFFDE98009ADCFC /* QuartzCore.framework in Frameworks */,
 				A482AF9A1CFFDE6B009ADCFC /* CoreGraphics.framework in Frameworks */,
@@ -94,8 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4BE23E1D0088F500124B96 /* libapplist.dylib in Frameworks */,
 				A482AFF61D004BBB009ADCFC /* libobjcipc.dylib in Frameworks */,
-				A482B0151D005289009ADCFC /* libobjcipc.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +134,7 @@
 		A4257EA11CFFC5B200DACCA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC4BE23C1D00889100124B96 /* libapplist.dylib */,
 				A482AFF51D004BBB009ADCFC /* libobjcipc.dylib */,
 				A482AF9B1CFFDE98009ADCFC /* QuartzCore.framework */,
 				A482AF991CFFDE6B009ADCFC /* CoreGraphics.framework */,
@@ -139,6 +150,7 @@
 			children = (
 				A482AF9D1CFFDF96009ADCFC /* CustomWindow.h */,
 				A482AF9E1CFFDF96009ADCFC /* CustomWindow.m */,
+				CC4BE2471D00989A00124B96 /* UIDevice2.h */,
 				A482AF8D1CFFDA79009ADCFC /* Entrance.h */,
 				A482AF8E1CFFDA79009ADCFC /* Entrance.m */,
 				A4257EAC1CFFC5B200DACCA6 /* demo.xm */,
@@ -147,6 +159,9 @@
 				A482AF941CFFDC4F009ADCFC /* MainViewController.m */,
 				A482AFB31D0013EC009ADCFC /* ESPopoverView.h */,
 				A482AFB41D0013EC009ADCFC /* ESPopoverView.m */,
+				CC4BE23F1D00930E00124B96 /* ActionMenu.h */,
+				CC4BE2431D00942000124B96 /* UIResponder+AMExample.h */,
+				CC4BE2441D00942000124B96 /* UIResponder+AMExample.m */,
 				A4257EA51CFFC5B200DACCA6 /* Package */,
 				A4257EA91CFFC5B200DACCA6 /* Supporting Files */,
 			);
@@ -207,7 +222,7 @@
 		A482AFDF1D0047B6009ADCFC /* SimpleTools */ = {
 			isa = PBXGroup;
 			children = (
-				A482B0141D005289009ADCFC /* libobjcipc.dylib */,
+				CC4BE2391D0086B200124B96 /* Define.h */,
 				A482AFE31D0047B6009ADCFC /* AppDelegate.h */,
 				A482AFE41D0047B6009ADCFC /* AppDelegate.m */,
 				A482AFE61D0047B6009ADCFC /* ViewController.h */,
@@ -238,12 +253,14 @@
 			files = (
 				A482AF8F1CFFDA79009ADCFC /* Entrance.h in Headers */,
 				A482AFAB1D0004F6009ADCFC /* ALApplicationTableDataSource.h in Headers */,
+				CC4BE2451D00942000124B96 /* UIResponder+AMExample.h in Headers */,
 				A482AF971CFFDC4F009ADCFC /* MainViewController.h in Headers */,
 				A482AFB51D0013EC009ADCFC /* ESPopoverView.h in Headers */,
 				A482AFAA1D0004F6009ADCFC /* ALApplicationList.h in Headers */,
 				A482AFAD1D0004F6009ADCFC /* AppList.h in Headers */,
 				A482AF9F1CFFDF96009ADCFC /* CustomWindow.h in Headers */,
 				A482AFAC1D0004F6009ADCFC /* ALValueCell.h in Headers */,
+				CC4BE2411D00930E00124B96 /* ActionMenu.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +391,7 @@
 				A4257EAE1CFFC5B200DACCA6 /* demo.mm in Sources */,
 				A482AF901CFFDA79009ADCFC /* Entrance.m in Sources */,
 				A482AF981CFFDC4F009ADCFC /* MainViewController.m in Sources */,
+				CC4BE2461D00942000124B96 /* UIResponder+AMExample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
