@@ -27,28 +27,14 @@
 
 
 -(void) setUp {
-    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"WD.ServiceIP.Get"
-                                          dictionary:@{@"key": @"value"}
-                                        replyHandler:^(NSDictionary *response) {
-                                            NSLog(@"response:%@",response);
-                                        }];
-    
-//    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:@"logout" handler:^NSDictionary *(NSDictionary * message) {
-//        system("killall -9 SpringBoard");
-//        return nil;
-//    }];
-//    
-//    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:@"reboot" handler:^NSDictionary *(NSDictionary * message) {
-//        system("reboot");
-//        return nil;
-//    }];
-//    
-//    [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:@"powerDown" handler:^NSDictionary *(NSDictionary * message) {
-//        id SpringBoard = [UIApplication sharedApplication];
-//        [SpringBoard powerDown];
-//        return nil;
-//    }];
-//OBJCIPC sendMessageToSpringBoardWithMessageName:<#(NSString *)#> dictionary:<#(NSDictionary *)#>
+//    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"WD.ServiceIP.Get"
+//                                          dictionary:@{@"key": @"value"}
+//                                        replyHandler:^(NSDictionary *response) {
+//                                            NSLog(@"response:%@",response);
+//                                        }];
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"logout" dictionary:nil];
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"reboot" dictionary:nil];
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"powerDown" dictionary:nil];
 }
 
 
