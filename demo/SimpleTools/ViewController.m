@@ -16,27 +16,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *button = [UIButton buttonWithType:0];
-    button.frame = CGRectMake(0, 0, 300, 300);
-    [button setTitle:@"点击" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(setUp) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    button.center = self.view.center;
-    button.backgroundColor = [ UIColor grayColor];
 }
 
 
--(void) setUp {
-//    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"WD.ServiceIP.Get"
-//                                          dictionary:@{@"key": @"value"}
-//                                        replyHandler:^(NSDictionary *response) {
-//                                            NSLog(@"response:%@",response);
-//                                        }];
-    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"logout" dictionary:nil];
-    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"reboot" dictionary:nil];
-    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"powerDown" dictionary:nil];
+- (IBAction)logOutAction:(id)sender {
+        [OBJCIPC sendMessageToSpringBoardWithMessageName:@"logout" dictionary:nil replyHandler:^(NSDictionary *response) {
+            NSLog(@"logOut");
+        }];
 }
 
-
+- (IBAction)rebootAction:(id)sender {
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"reboot" dictionary:nil replyHandler:^(NSDictionary *response) {
+        NSLog(@"reboot");
+    }];
+}
+- (IBAction)powerDownAction:(id)sender {
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:@"powerDown" dictionary:nil replyHandler:^(NSDictionary *response) {
+        NSLog(@"powerDown");
+    }];
+}
 
 @end

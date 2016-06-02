@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "84CF264DDF3B9DEC2D47170F2117E87F1D10B2CD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "84CF264DDF3B9DEC2D47170F2117E87F1D10B2CD" : 0,
+    "E2811579280C8FC45DBD8A3EB086096BA7A2E580" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "164A11A8-C1A6-4399-BEEB-1E25789B201C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "84CF264DDF3B9DEC2D47170F2117E87F1D10B2CD" : "SimpleTools\/",
+    "E2811579280C8FC45DBD8A3EB086096BA7A2E580" : "..\/..\/opt\/theos"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "demo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "demo\/demo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MoPellet\/SimpleTools.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "84CF264DDF3B9DEC2D47170F2117E87F1D10B2CD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/haorenqq\/theos\/",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2811579280C8FC45DBD8A3EB086096BA7A2E580"
+    }
+  ]
+}

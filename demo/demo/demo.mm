@@ -1,4 +1,4 @@
-#line 1 "/Users/jiangqin/tweaks/SimpleTools/demo/demo/demo.xm"
+#line 1 "/Users/mopellet/SimpleTools/demo/demo/demo.xm"
 #import "Entrance.h"
 
 

@@ -25,7 +25,7 @@
 
 
 - (void)initialize{
-    self.vc = [((UIViewController *)[NSClassFromString(@"ViewController") alloc]) init];
+    self.vc = [((UIViewController *)[NSClassFromString(@"MainViewController") alloc]) init];
     self.rootViewController   = self.vc;
     self.backgroundColor   = [UIColor clearColor];
     [self setWindowLevel:1];

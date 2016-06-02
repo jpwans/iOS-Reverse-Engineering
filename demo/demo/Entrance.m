@@ -11,6 +11,7 @@
 #import <dlfcn.h>
 #import "CustomWindow.h"
 #import "objcipc.h"
+#import <substrate.h>
 @implementation Entrance
 + (instancetype)sharedInstance {
     static id sharedInstance = nil;

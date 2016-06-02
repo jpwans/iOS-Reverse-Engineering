@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 MoPellt. All rights reserved.
 //
 
-#import "ViewController.h"
-@interface ViewController ()
+#import "MainViewController.h"
+@interface MainViewController ()
 //<MOMenuViewDelegate>
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];

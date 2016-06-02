@@ -13,8 +13,8 @@
 		A4257EBB1CFFC5FC00DACCA6 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4257EBA1CFFC5FC00DACCA6 /* libsubstrate.dylib */; };
 		A482AF8F1CFFDA79009ADCFC /* Entrance.h in Headers */ = {isa = PBXBuildFile; fileRef = A482AF8D1CFFDA79009ADCFC /* Entrance.h */; };
 		A482AF901CFFDA79009ADCFC /* Entrance.m in Sources */ = {isa = PBXBuildFile; fileRef = A482AF8E1CFFDA79009ADCFC /* Entrance.m */; };
-		A482AF971CFFDC4F009ADCFC /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A482AF931CFFDC4F009ADCFC /* ViewController.h */; };
-		A482AF981CFFDC4F009ADCFC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482AF941CFFDC4F009ADCFC /* ViewController.m */; };
+		A482AF971CFFDC4F009ADCFC /* MainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A482AF931CFFDC4F009ADCFC /* MainViewController.h */; };
+		A482AF981CFFDC4F009ADCFC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482AF941CFFDC4F009ADCFC /* MainViewController.m */; };
 		A482AF9A1CFFDE6B009ADCFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A482AF991CFFDE6B009ADCFC /* CoreGraphics.framework */; };
 		A482AF9C1CFFDE98009ADCFC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A482AF9B1CFFDE98009ADCFC /* QuartzCore.framework */; };
 		A482AF9F1CFFDF96009ADCFC /* CustomWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A482AF9D1CFFDF96009ADCFC /* CustomWindow.h */; };
@@ -50,8 +50,8 @@
 		A4257EBA1CFFC5FC00DACCA6 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../../opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
 		A482AF8D1CFFDA79009ADCFC /* Entrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entrance.h; sourceTree = "<group>"; };
 		A482AF8E1CFFDA79009ADCFC /* Entrance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entrance.m; sourceTree = "<group>"; };
-		A482AF931CFFDC4F009ADCFC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A482AF941CFFDC4F009ADCFC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A482AF931CFFDC4F009ADCFC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A482AF941CFFDC4F009ADCFC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		A482AF991CFFDE6B009ADCFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A482AF9B1CFFDE98009ADCFC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A482AF9D1CFFDF96009ADCFC /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
@@ -73,7 +73,6 @@
 		A482AFEF1D0047B6009ADCFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A482AFF11D0047B6009ADCFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A482AFF51D004BBB009ADCFC /* libobjcipc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjcipc.dylib; path = ../../../../../opt/theos/lib/libobjcipc.dylib; sourceTree = "<group>"; };
-		A482B00F1D004C15009ADCFC /* libobjcipc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libobjcipc.xcodeproj; path = ../../../../../../opt/theos/include/libobjcipc/libobjcipc.xcodeproj; sourceTree = "<group>"; };
 		A482B0141D005289009ADCFC /* libobjcipc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libobjcipc.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,8 +143,8 @@
 				A482AF8E1CFFDA79009ADCFC /* Entrance.m */,
 				A4257EAC1CFFC5B200DACCA6 /* demo.xm */,
 				A4257EAD1CFFC5B200DACCA6 /* demo.mm */,
-				A482AF931CFFDC4F009ADCFC /* ViewController.h */,
-				A482AF941CFFDC4F009ADCFC /* ViewController.m */,
+				A482AF931CFFDC4F009ADCFC /* MainViewController.h */,
+				A482AF941CFFDC4F009ADCFC /* MainViewController.m */,
 				A482AFB31D0013EC009ADCFC /* ESPopoverView.h */,
 				A482AFB41D0013EC009ADCFC /* ESPopoverView.m */,
 				A4257EA51CFFC5B200DACCA6 /* Package */,
@@ -209,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				A482B0141D005289009ADCFC /* libobjcipc.dylib */,
-				A482B00F1D004C15009ADCFC /* libobjcipc.xcodeproj */,
 				A482AFE31D0047B6009ADCFC /* AppDelegate.h */,
 				A482AFE41D0047B6009ADCFC /* AppDelegate.m */,
 				A482AFE61D0047B6009ADCFC /* ViewController.h */,
@@ -231,13 +229,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A482B0101D004C15009ADCFC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -247,7 +238,7 @@
 			files = (
 				A482AF8F1CFFDA79009ADCFC /* Entrance.h in Headers */,
 				A482AFAB1D0004F6009ADCFC /* ALApplicationTableDataSource.h in Headers */,
-				A482AF971CFFDC4F009ADCFC /* ViewController.h in Headers */,
+				A482AF971CFFDC4F009ADCFC /* MainViewController.h in Headers */,
 				A482AFB51D0013EC009ADCFC /* ESPopoverView.h in Headers */,
 				A482AFAA1D0004F6009ADCFC /* ALApplicationList.h in Headers */,
 				A482AFAD1D0004F6009ADCFC /* AppList.h in Headers */,
@@ -323,12 +314,6 @@
 			mainGroup = A4257E941CFFC5B200DACCA6;
 			productRefGroup = A4257EA01CFFC5B200DACCA6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A482B0101D004C15009ADCFC /* Products */;
-					ProjectRef = A482B00F1D004C15009ADCFC /* libobjcipc.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A4257E9E1CFFC5B200DACCA6 /* demo */,
@@ -388,7 +373,7 @@
 				A482AFA01CFFDF96009ADCFC /* CustomWindow.m in Sources */,
 				A4257EAE1CFFC5B200DACCA6 /* demo.mm in Sources */,
 				A482AF901CFFDA79009ADCFC /* Entrance.m in Sources */,
-				A482AF981CFFDC4F009ADCFC /* ViewController.m in Sources */,
+				A482AF981CFFDC4F009ADCFC /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +484,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = 192.168.2.6;
+				iOSOpenDevDevice = 192.168.1.101;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -529,7 +514,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = 192.168.2.6;
+				iOSOpenDevDevice = 192.168.1.101;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -583,7 +568,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mopellet.SimpleTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "14524131-8fe9-4598-8533-249bbad994dd";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -633,7 +618,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mopellet.SimpleTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "14524131-8fe9-4598-8533-249bbad994dd";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -665,6 +650,7 @@
 				A482AFF31D0047B6009ADCFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
