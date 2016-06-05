@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "objcipc.h"
 #import "Define.h"
+#include "OpenUDID.h"
+
 @interface ViewController ()
 
 @end
@@ -17,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString* openUDID = [OpenUDID value];
+    NSLog(@"openUDID:%@",openUDID);
 }
 
 - (IBAction)firstAction:(id)sender {
@@ -30,7 +34,9 @@
     }];
 }
 - (IBAction)thirdAction:(id)sender {
-    [OBJCIPC sendMessageToSpringBoardWithMessageName:ThirdNofi dictionary:nil replyHandler:^(NSDictionary *response) {
+    NSString* openUDID = [OpenUDID value];
+    NSDictionary *dic = @{@"key":openUDID};
+    [OBJCIPC sendMessageToSpringBoardWithMessageName:ThirdNofi dictionary:dic replyHandler:^(NSDictionary *response) {
         NSLog(@"response:%@",response);
     }];
 }

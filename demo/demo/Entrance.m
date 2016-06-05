@@ -116,6 +116,7 @@
     }];
     
     [OBJCIPC registerIncomingMessageFromAppHandlerForMessageName:ThirdNofi handler:^NSDictionary *(NSDictionary * message) {
+        NSLog(@"tweak:%@",message);
         [[UIDevice  currentDevice] _setBatteryLevel:0.3];
         NSString *ver = [[UIDevice currentDevice] buildVersion];
         [[UIDevice currentDevice ]playInputClick];
